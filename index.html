@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="رزومه حرفه‌ای مرتضی آقاسی زاده - مشاور ارشد رسانه‌های دیجیتال، تحلیلگر آماری و متخصص سیستم‌های حفاظتی">
+    <title>مرتضی آقاسی زاده | رزومه حرفه‌ای</title>
+
+    <!-- Open Graph tags for social media previews (Telegram, WhatsApp, LinkedIn, etc.) -->
+    <meta property="og:title" content="مرتضی آقاسی‌زاده | رزومه حرفه‌ای">
+    <meta property="og:description" content="مشاور ارشد رسانه‌های دیجیتال، تحلیلگر آماری و متخصص سیستم‌های حفاظتی">
+    <meta property="og:image" content="https://aghasizade.github.io/mory-A.jpg">
+    <meta property="og:url" content="https://aghasizade.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="mory-A.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Animated Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" data-i18n="nav-about">درباره من</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">تخصص‌ها</a></li>
+                    <li><a href="#experience" data-i18n="nav-exp">سوابق شغلی</a></li>
+                    <li><a href="#education" data-i18n="nav-edu">تحصیلات</a></li>
+                    <li><a href="#services" data-i18n="nav-serv">خدمات</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">تماس</a></li>
+                </ul>
+                <div class="lang-switcher" id="langSwitcher">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">EN</span>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-i18n="hero-title">سلام، من <span class="highlight">مرتضی آقاسی زاده</span> هستم</h1>
+                    <p class="hero-subtitle" data-i18n="hero-subtitle">مدیر برنامه‌ریزی، تحلیلگر آماری و مشاور ارشد رسانه‌های دیجیتال</p>
+                    <p class="hero-description" data-i18n="hero-desc">تلفیق تفکر تحلیلی آماری با هنر گرافیک، تدوین و هوش مصنوعی برای ارتقای فرآیندهای مدرن سازمانی با بیش از ۱۵ سال سابقه فعالیت در سازمان‌های حاکمیتی و بخش خصوصی.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero-btn-contact">همکاری با من</a>
+                        <a href="#services" class="btn btn-secondary" data-i18n="hero-btn-services">مشاهده خدمات</a>
+                        <a href="resume.pdf" download class="btn btn-secondary" data-i18n="hero-btn-resume"><i class="fas fa-download"></i> دانلود رزومه</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img src="mory-A.jpg" alt="مرتضی آقاسی زاده" class="profile-img">
+                        </div>
+                        <div class="profile-info">
+                            <span data-i18n="hero-profile-tag">متخصص هوشمندسازی و تحلیل داده</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about-title">درباره من</h2>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p data-i18n="about-p1">من به عنوان مدیر و کارشناس ارشد برنامه‌ریزی و تحلیلگر آماری، سابقه گسترده‌ای در سازمان‌های بزرگ شهری و حاکمیتی دارم. ویژگی متمایز من، توانایی تلفیق ابزارهای پیشرفته گرافیک، تدوین و هوش مصنوعی با تحلیل‌های آماری دقیق است.</p>
+                        <p data-i18n="about-p2">در حوزه‌های هوشمندسازی، مدیریت کیفیت و سیستم‌های امنیتی (به ویژه در گروه صبا صنعت)، راهکارهای نوین بصری و اتوماسیون هوشمند را پیاده‌سازی کرده‌ام تا بهره‌وری سازمانی را به حداکثر برسانم.</p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span data-i18n="detail-email">m99mash@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span data-i18n="detail-phone">۰۹۱۵۷۲۵۵۰۴۵ | ۰۹۳۵۲۲۶۲۶۴۷</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="detail-loc">مشهد، ایران</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills-title">تخصص‌ها و توانمندی‌ها</h2>
+            <div class="skills-categories">
+                <!-- Creative & Media -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-palette"></i>
+                        <h3 data-i18n="cat-media">رسانه و گرافیک</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span data-i18n="skill-1">طراحی هویت بصری و اینفوگرافیک (Photoshop)</span>
+                            <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-2">تدوین ویدیو و جلوه‌های بصری (Premiere)</span>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-3">سناریونویسی و نظارت کیفی پروژه‌های هنری</span>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Automation -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 data-i18n="cat-ai">هوش مصنوعی و اتوماسیون</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span data-i18n="skill-4">معماری ایجنت‌های هوشمند (Multi-Agent)</span>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-5">مدیریت مدل‌های زبانی (OpenRouter, Llama, Hermes)</span>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-6">اتوماسیون اداری مبتنی بر AI</span>
+                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Systems -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 data-i18n="cat-sec">سیستم‌های حفاظتی</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span data-i18n="skill-7">طراحی و اجرای CCTV تحت شبکه (IP)</span>
+                            <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-8">پردازش تصویر و AI Video Analytics</span>
+                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-9">راه‌اندازی اتاق‌های مانیتورینگ هوشمند</span>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics & Quality -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3 data-i18n="cat-stat">آمار و مدیریت کیفیت</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span data-i18n="skill-10">تحلیل آماری (SPSS, R, Minitab)</span>
+                            <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-11">پیاده‌سازی ISO 9001 و نظام 5S</span>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-i18n="skill-12">تحلیل داده‌های کلان و داشبوردسازی</span>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="exp-title">سوابق شغلی و اجرایی</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-1-title">مشاور هنری، رسانه‌های دیجیتال و پروژه‌های حفاظتی</h3>
+                        <span class="company" data-i18n="exp-1-comp">گروه صبا صنعت (sabasanatgroup.ir)</span>
+                        <p data-i18n="exp-1-desc">مدیریت هویت بصری برند، نظارت بر کمپین‌های محتوایی و اجرای شبکه‌های نظارت تصویری هوشمند بر پایه پردازش تصویر.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-2-title">کارشناس برنامه‌ریزی</h3>
+                        <span class="company" data-i18n="exp-2-comp">آستان قدس رضوی</span>
+                        <span class="date" data-i18n="exp-2-date">۱۰ سال سابقه</span>
+                        <p data-i18n="exp-2-desc">تدوین شاخص‌های ارزیابی عملکرد، فرآیندهای برنامه‌ریزی کلان و تحلیل مصور داده‌های سازمانی.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-3-title">مدیر برنامه‌ریزی</h3>
+                        <span class="company" data-i18n="exp-3-comp">شرکت سرمایه‌گذاری ستاوند – شهرداری منطقه دو مشهد</span>
+                        <span class="date" data-i18n="exp-3-date">۹ سال سابقه</span>
+                        <p data-i18n="exp-3-desc">مدیریت استراتژیک و برنامه‌ریزی عملیاتی در سطح منطقه شهری.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-4-title">کارشناس تحلیل و مدیریت آمار (فاوا)</h3>
+                        <span class="company" data-i18n="exp-4-comp">معاونت برنامه‌ریزی شهرداری مشهد</span>
+                        <span class="date" data-i18n="exp-4-date">۲ سال سابقه</span>
+                        <p data-i18n="exp-4-desc">تحلیل داده‌های کلان شهری و توسعه سیستم‌های اطلاعاتی سازمان فاوا.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-5-title">کارشناس ایزو (ISO) و 5S</h3>
+                        <span class="company" data-i18n="exp-5-comp">شهرداری منطقه ۷ مشهد</span>
+                        <span class="date" data-i18n="exp-5-date">۱ سال سابقه</span>
+                        <p data-i18n="exp-5-desc">پیاده‌سازی نظام آراستگی (5S) و مستندسازی استانداردهای اداری.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-6-title">مشاور رسمی آماری</h3>
+                        <span class="company" data-i18n="exp-6-comp">شرکت بهره‌برداری قطار شهری مشهد</span>
+                        <span class="date" data-i18n="exp-6-date">۲ سال سابقه</span>
+                        <p data-i18n="exp-6-desc">ارائه مشاوره‌های تخصصی آماری برای بهینه‌سازی عملیات حمل و نقل شهری.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="exp-7-title">مدرس دانشگاه و دوره‌های سازمانی</h3>
+                        <span class="company" data-i18n="exp-7-comp">دانشگاه پیام نور و مراکز ارگانیک</span>
+                        <p data-i18n="exp-7-desc">تدریس آمار، ریاضی، نرم‌افزارهای تحلیلی، تولید محتوای دیجیتال و هوش مصنوعی مولد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="edu-title">سوابق تحصیلی</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-i18n="edu-1-deg">کارشناسی ارشد آمار استنباطی</h3>
+                    <span class="university" data-i18n="edu-1-uni">دانشگاه پیام نور مشهد</span>
+                </div>
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <h3 data-i18n="edu-2-deg">کارشناسی آمار</h3>
+                    <span class="university" data-i18n="edu-2-uni">دانشگاه فردوسی مشهد</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="serv-title">خدمات تخصصی</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-film"></i></div>
+                    <h3 data-i18n="serv-1-title">رسانه‌های دیجیتال</h3>
+                    <p data-i18n="serv-1-desc">مشاوره برندینگ، طراحی هویت بصری، سناریونویسی و تدوین حرفه‌ای ویدیوهای معرفی دستاوردها و تیزرهای صنعتی.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3 data-i18n="serv-2-title">تحول دیجیتال و AI</h3>
+                    <p data-i18n="serv-2-desc">استقرار مدل‌های هوش مصنوعی و طراحی ایجنت‌های اختصاصی برای اتوماسیون کارهای اداری و تولید محتوای هوشمند.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-video"></i></div>
+                    <h3 data-i18n="serv-3-title">سیستم‌های حفاظتی</h3>
+                    <p data-i18n="serv-3-desc">مهندسی، تأمین و اجرای شبکه‌های نظارت تصویری (CCTV) مجهز به آنالیز هوشمند تصاویر (Saba Sanat).</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 data-i18n="serv-4-title">مدیریت کیفیت و آمار</h3>
+                    <p data-i18n="serv-4-desc">مدیریت چرخه داده، داشبوردسازی راهبردی و استقرار استانداردهای ایزو و نظام آراستگی 5S.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="cont-title">تماس با من</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <div>
+                                <h3 data-i18n="cont-email">ایمیل</h3>
+                                <p>m99mash@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            <div>
+                                <h3 data-i18n="cont-phone">تلفن</h3>
+                                <p>۰۹۱۵۷۲۵۵۰۴۵ | ۰۹۳۵۲۲۶۲۶۴۷</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <h3 data-i18n="cont-loc">موقعیت</h3>
+                                <p>مشهد، ایران</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social-wrapper">
+                        <h3 class="social-section-title" data-i18n="cont-social-title">ارتباط در شبکه‌های اجتماعی</h3>
+                        <div class="social-container">
+                            <a href="https://linkedin.com/in/morteza-aghasizadeh-a974b4105" target="_blank" class="social-card linkedin">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="social-info-text">
+                                    <span class="social-platform">LinkedIn</span>
+                                    <span class="social-handle">morteza-aghasizadeh</span>
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/mory_a84" target="_blank" class="social-card instagram">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="social-info-text">
+                                    <span class="social-platform">Instagram</span>
+                                    <span class="social-handle">@mory_a84</span>
+                                </div>
+                            </a>
+                            <a href="https://t.me/m33mash" target="_blank" class="social-card telegram">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </div>
+                                <div class="social-info-text">
+                                    <span class="social-platform">Telegram</span>
+                                    <span class="social-handle">@m33mash</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Integrated with Formspree for real emails -->
+                <form action="https://formspree.io/f/xjgqlgja" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" data-i18n-placeholder="form-name" placeholder="نام شما" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" data-i18n-placeholder="form-email" placeholder="ایمیل شما" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" data-i18n-placeholder="form-subj" placeholder="موضوع">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" data-i18n-placeholder="form-msg" placeholder="پیام شما" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="contactSubmitBtn" data-i18n="form-btn">ارسال پیام</button>
+                    <p class="form-status" id="formStatus" style="display:none; margin-top:15px; text-align:center;"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright" data-i18n="footer-copy">تمامی حقوق محفوظ است. مرتضی آقاسی زاده &copy; ۱۴۰۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form submission via Formspree (AJAX - no page reload)
+        (function () {
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('formStatus');
+            const btn = document.getElementById('contactSubmitBtn');
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const originalBtnText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'در حال ارسال...';
+                status.style.display = 'none';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            status.textContent = 'پیام شما با موفقیت ارسال شد. به زودی پاسخ خواهم داد.';
+                            status.style.color = '#2ecc71';
+                            form.reset();
+                        } else {
+                            return response.json().then((data) => {
+                                const errMsg = (data && data.errors)
+                                    ? data.errors.map((err) => err.message).join(', ')
+                                    : 'ارسال پیام با خطا مواجه شد. لطفاً دوباره تلاش کنید.';
+                                status.textContent = errMsg;
+                                status.style.color = '#e74c3c';
+                            });
+                        }
+                    })
+                    .catch(() => {
+                        status.textContent = 'خطا در اتصال به سرور. لطفاً اتصال اینترنت خود را بررسی کنید.';
+                        status.style.color = '#e74c3c';
+                    })
+                    .finally(() => {
+                        status.style.display = 'block';
+                        btn.disabled = false;
+                        btn.textContent = originalBtnText;
+                    });
+            });
+        })();
+    </script>
+</body>
+</html>
