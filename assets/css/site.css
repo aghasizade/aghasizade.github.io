@@ -534,6 +534,9 @@ ul, ol { padding: 0; list-style: none; }
 .form-status { font-size: 14px; min-height: 1.6em; text-align: center; }
 .form-status.ok { color: var(--ok); }
 .form-status.err { color: var(--err); }
+.form-status.wait { color: var(--ink-2); }
+.form-status.wait::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-inline-end: 8px; vertical-align: -1px; border: 2px solid var(--line-2); border-top-color: var(--accent); border-radius: 50%; animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 .mail-fallback { display: inline-flex; margin-inline-start: 6px; color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .hp { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 

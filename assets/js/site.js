@@ -273,13 +273,13 @@
   var OWNER = 'm22mash@gmail.com';
   var MSG = {
     fa: {
-      sending: 'در حال ارسال…', ok: 'پیام شما ارسال شد. به‌زودی پاسخ می‌دهم.',
+      sending: 'در حال ارسال…', wait: 'در حال ارسال پیام؛ ممکن است تا یک دقیقه طول بکشد. لطفاً صفحه را نبندید.', ok: 'پیام شما ارسال شد. به‌زودی پاسخ می‌دهم.',
       err: 'ارسال پیام انجام نشد.', net: 'اتصال به سرویس پیام برقرار نشد.',
       fallback: 'ارسال با برنامهٔ ایمیل', invalid: 'لطفاً نام، ایمیل معتبر و متن پیام را وارد کنید.',
       subject: 'پیام از سایت رزومه'
     },
     en: {
-      sending: 'Sending…', ok: 'Message sent. I’ll reply soon.',
+      sending: 'Sending…', wait: 'Sending your message — this can take up to a minute. Please keep this page open.', ok: 'Message sent. I’ll reply soon.',
       err: 'Couldn’t send the message.', net: 'Couldn’t reach the message service.',
       fallback: 'Send with your email app', invalid: 'Enter your name, a valid email and a message.',
       subject: 'Message from the résumé site'
@@ -318,6 +318,8 @@
     label.textContent = MSG[lang].sending;
     setStatus('');
     var endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+    // the service often takes 30+ seconds; reassure the visitor instead of looking stuck
+    var slow = setTimeout(function () { setStatus(MSG[lang].wait, 'wait'); }, 4000);
     fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
       .then(function (res) {
         return res.json().catch(function () { return {}; }).then(function (data) {
@@ -327,7 +329,7 @@
         });
       })
       .catch(function () { setStatus(MSG[lang].net, 'err', true); })
-      .then(function () { formBtn.disabled = false; label.innerHTML = original; });
+      .then(function () { clearTimeout(slow); formBtn.disabled = false; label.innerHTML = original; });
   });
 
   addEventListener('beforeprint', function () {
